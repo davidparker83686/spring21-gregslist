@@ -1,69 +1,64 @@
 import { ProxyState } from "../AppState.js";
-import { carsService } from "../Services/CarsService.js";
+import { jobsService } from "../Services/JobsService.js";
 
 
 //Private
 function _draw() {
   // What are we drawing
-  let cars = ProxyState.cars
+  let jobs = ProxyState.jobs
   let template = ''
   // if a collection itterate over collection to generate template for each object
-  cars.forEach(car => {
-    console.log(car)
-    template += car.Template
+  jobs.forEach(job => {
+    console.log(job)
+    template += job.Template
   })
   // render to page
-  document.getElementById('cars').innerHTML = template
+  document.getElementById('jobs').innerHTML = template
 }
 
 //Public
-export default class CarsController {
+export default class JobsController {
   constructor() {
     // OH oh more magic. you still know.....
     // 1st argument is name of the property in the AppState to 'watch' for changes
     // 2nd argument: name of the function to run when 1st argument property changes
-    ProxyState.on('cars', _draw);
+    ProxyState.on('jobs', _draw);
 
     // manually run draw the on page load
     _draw()
   }
 
 
-  createCar() {
+  createJob() {
     // if this method is triggered by an event (submit event) prevent the default action of reloding the page
     window.event.preventDefault()
     // grab the element from html that triggered this event
     const form = window.event.target
     debugger
-    let newCar = {
+    let newJob = {
       // @ts-ignore
-      make: form.make.value,
+      company: form.company.value,
       // @ts-ignore
-      model: form.model.value,
+      title: form.title.value,
       // @ts-ignore
-      year: form.year.value,
+      rate: form.rate.value,
       // @ts-ignore  this converts the string to a number
-      price: Number(form.price.value),
+      hours: Number(form.hours.value),
       // @ts-ignore
       description: form.description.value,
       // @ts-ignore
       imgUrl: form.imgUrl.value
     }
-    carsService.createCar(newCar)
+    jobsService.createJob(newJob)
 
     // @ts-ignore
     form.reset()
 
     // get the modal and close (using jQuery's "$" selector) 
-    $('#new-car-form').modal('hide')
+    $('#new-job-form').modal('hide')
   }
 
-  deleteCar(id) {
-    carsService.deleteCar(id)
+  deleteJob(id) {
+    jobsService.deleteJob(id)
   }
-
-  bid(id) {
-    carsService.bid(id)
-  }
-
 }

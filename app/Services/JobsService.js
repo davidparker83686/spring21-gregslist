@@ -1,11 +1,10 @@
 import { ProxyState } from "../AppState.js";
 import Job from "../Models/Job.js";
 
-
 class JobsService {
   createJob(newJob) {
     debugger
-    let job = new Job(newJob.make, newJob.model, newJob.year, newJob.price, newJob.description, newJob.imgUrl)
+    let job = new Job(newJob.company, newJob.title, newJob.rate, newJob.hours, newJob.description, newJob.imgUrl)
     ProxyState.jobs = [...ProxyState.jobs, job]
   }
   

@@ -68,7 +68,7 @@
                                 <input type="text" class="form-control" id="model" placeholder="Model..." required>
                             </div>
                             <div class="form-group">
-                                <label for="make">Year</label>
+                                <label for="year">Year</label>
                                 <input type="number" class="form-control" id="year" placeholder="Year..." min="1920"
                                     max="2021" required>
                             </div>
@@ -111,7 +111,7 @@
             </div> -->
         </div>
 
-</section>
+        </section>
 
 
 
@@ -141,14 +141,10 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <!-- when submitted run the function provided
-                        this can be triggered by the button or the enter key -->
                         <form onsubmit="app.housesController.createHouse()">
                             <div class="modal-body">
-                                <!-- Form to create a car  -->
                                 <div class="form-group">
                                     <label for="bedrooms">Bedrooms</label>
-                                    <!-- the id determines the property on the form object -->
                                     <input type="text" class="form-control" id="bedrooms" placeholder="Bedrooms..." required>
                                 </div>
                                 <div class="form-group">
@@ -183,20 +179,7 @@
             </div>
     
             <div class="row" id="houses">
-                <!-- NOTE this is the HTML for a single car, it will be repeated for each car and injected from the -->
-                <!-- <div class="col-md-4 mb-3">
-                    <div class="card shadow">
-                        <img class="card-img-top" src="//placehold.it/200x200" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">MAKE | MODEL | YEAR</h4>
-                            <p class="card-text">DESCRIPTION - PRICE</p>
-                        </div>
-                        <div class="px-3 pb-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-danger">Delete</button>
-                            <button type="button" class="btn btn-info">Bid</button>
-                        </div>
-                    </div>
-                </div> -->
+
             </div>
 
 
@@ -228,28 +211,24 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <!-- when submitted run the function provided
-                        this can be triggered by the button or the enter key -->
-                        <form onsubmit="app.carsController.createJob()">
+                        <form onsubmit="app.jobsController.createJob()">
                             <div class="modal-body">
-                                <!-- Form to create a car  -->
                                 <div class="form-group">
-                                    <label for="make">Make</label>
-                                    <!-- the id determines the property on the form object -->
-                                    <input type="text" class="form-control" id="make" placeholder="Make..." required>
+                                    <label for="company">Company</label>
+                                    <input type="text" class="form-control" id="company" placeholder="Company..." required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="model">Model</label>
-                                    <input type="text" class="form-control" id="model" placeholder="Model..." required>
+                                    <label for="title">Title</label>
+                                    <input type="text" class="form-control" id="title" placeholder="Title..." required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="make">Year</label>
-                                    <input type="number" class="form-control" id="year" placeholder="Year..." min="1920"
+                                    <label for="rate">Rate</label>
+                                    <input type="number" class="form-control" id="rate" placeholder="Rate..." min="1920"
                                         max="2021" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="price">Price</label>
-                                    <input type="number" class="form-control" id="price" placeholder="Price..." min="1">
+                                    <label for="hours">Hours</label>
+                                    <input type="number" class="form-control" id="hours" placeholder="Hours..." min="1">
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Description</label>
@@ -268,7 +247,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" id="cars">
+            <div class="row" id="jobs">
                 <!-- NOTE this is the HTML for a single car, it will be repeated for each car and injected from the -->
                 <!-- <div class="col-md-4 mb-3">
                     <div class="card shadow">

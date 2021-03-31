@@ -13,7 +13,7 @@ class AppState extends EventEmitter {
     new Car('Zastava', 'Yugo', 1988, 100, 'spome rust', 'https://media.istockphoto.com/photos/old-rusty-red-broken-and-damaged-yugo-car-full-of-junk-parked-and-on-picture-id1056309302?s=612x612')
   ]
 
-  
+
 houses = [ 
   new House(3,2.5,3000,50000,'12289 S Brunsick Ave, Nampa ID','https://pbs.twimg.com/media/ETpZLKZXgAANyBw.jpg'),
   new House(2,2, 2000,800000, '85 Melrose St, Brooklyn NY','https://cdn1.mecum.com/auctions/fl0120/fl0120-395915/images/1-1572992729058@2x.jpg?1574881322000'),
@@ -23,7 +23,7 @@ houses = [
 
 jobs = [
   new Job('Codeworks','Instructor','$30','full-Time','teach coding to cool people','https://pbs.twimg.com/media/ETpZLKZXgAANyBw.jpg'),
-  new Job('Bode NY', 'Pattern Maker','$20','pattern and sample maker', 'https://pbs.twimg.com/media/ETpZLKZXgAANyBw.jpg')
+  new Job('Bode NY', 'Pattern Maker','$20','part-time','pattern and sample maker','ljd-one.png')
 ]
 }
 

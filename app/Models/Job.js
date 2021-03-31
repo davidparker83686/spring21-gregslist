@@ -26,7 +26,6 @@ export default class Job {
           </div>
           <div class="px-3 pb-3 d-flex justify-content-between">
               <button type="button" class="btn btn-danger" onclick="app.jobsController.deleteJob('${this.id}')">Delete</button>
-              <button type="button" class="btn btn-info" onclick="app.jobsController.bid('${this.id}')">Bid</button>
           </div>
       </div>
     </div>
