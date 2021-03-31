@@ -21,8 +21,9 @@ export default class Job {
       <div class="card shadow">
           <img class="card-img-top" src="${this.imgUrl}" alt="">
           <div class="card-body">
-              <h4 class="card-title">${this.company} | ${this.title} | ${this.rate}</h4>
-              <p class="card-text">${this.description} - $${this.hours}</p>
+              <h4 class="card-title">${this.company} | ${this.title} </h4>
+              <p class="card-text">${this.description}</p>
+              <p class="card-text">${this.rate}per hour - ${this.hours}</p>
           </div>
           <div class="px-3 pb-3 d-flex justify-content-between">
               <button type="button" class="btn btn-danger" onclick="app.jobsController.deleteJob('${this.id}')">Delete</button>

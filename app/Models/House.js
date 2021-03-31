@@ -18,7 +18,7 @@ export default class House {
       <div class="card shadow">
           <img class="card-img-top" src="${this.imgUrl}" alt="">
           <div class="card-body">
-              <h4 class="card-title">${this.bedrooms} | ${this.bathroom} | ${this.sqFootage}</h4>
+              <h4 class="card-title">${this.bedrooms} Bed | ${this.bathroom} Bath | ${this.sqFootage} sqft</h4>
               <p class="card-text">${this.address} - $${this.price.toFixed(2)}</p>
           </div>
           <div class="px-3 pb-3 d-flex justify-content-between">
